@@ -14,7 +14,10 @@ export default function NewTopicForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (name.length === 0) {
+    if (
+      name.length === 0 ||
+      document.getElementById("iconId").value === "default"
+    ) {
       return;
     }
 

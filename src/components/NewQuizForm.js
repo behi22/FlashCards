@@ -20,7 +20,14 @@ export default function NewQuizForm() {
     if (name.length === 0) {
       return;
     }
-
+    if (topicId === "") {
+      alert("Select a topic that you have created before proceeding!");
+      return;
+    }
+    if (cards.length === 0) {
+      alert("Add at least one flashcard to your quiz before proceeding!");
+      return;
+    }
     const cardIds = [];
 
     let uniqueCardId = 0;
