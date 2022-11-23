@@ -9,7 +9,7 @@ export default function Card({ id }) {
   const [flipped, setFlipped] = useState(false);
 
   return (
-    <li>
+    <>
       {!flipped && (
         <button className="card" onClick={(e) => setFlipped(!flipped)}>
           {card.front}
@@ -20,6 +20,6 @@ export default function Card({ id }) {
           {card.back}
         </button>
       )}
-    </li>
+    </>
   );
 }
