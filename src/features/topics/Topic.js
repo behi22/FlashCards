@@ -23,8 +23,8 @@ export default function Topic() {
           </li>
         ))}
       </ul>
-      <Link to="/quizzes/new" className="button center">
-        Create a New Quiz
+      <Link to="/topics/new" className="button create-new-topic-button">
+        Create a New Topic
       </Link>
     </section>
   );

@@ -6,10 +6,11 @@
 html,
 body {
   margin: 0;
+  background-color: #ffffff;
 }
 
 nav {
-  background: #b736ff;
+  background: #ac2a2a;
   display: flex;
   padding: 24px 36px;
 }
@@ -40,26 +41,26 @@ nav a.active {
 h1 {
   font-weight: bold;
   font-size: 20px;
-  color: #000000;
+  color: #ac2a2a;
   margin: 0;
 }
 
 h2 {
   font-weight: bold;
   font-size: 16px;
-  color: #000000;
+  color: #ac2a2a;
   margin: 0;
 }
 
 button,
 .button {
   background: #ffffff;
-  border: 1px solid #03a8d8;
+  border: 1px solid #ac2a2a;
   border-radius: 20px;
   text-align: center;
   font-weight: bold;
   font-size: 14px;
-  color: #03a8d8;
+  color: #ac2a2a;
   padding: 10px 21px;
   text-decoration: none;
 }
@@ -118,7 +119,9 @@ section > h1 {
 }
 
 .remove-card-button {
-  color: #03a8d8;
+  color: #ac2a2a;
+  background-color: #ffffff;
+  text-decoration: underline;
   text-align: right;
   font-weight: bold;
   font-size: 12px;
@@ -209,10 +212,78 @@ li:not(:last-child) {
 }
 
 .card {
-  background: #b736ff;
+  background: #ac2a2a;
   border-radius: 4px;
   border: none;
   color: white;
   padding: 73px 44px;
   width: 100%;
+}
+
+.create-new-topic-button:hover {
+  background-color: #ac2a2a;
+  color: #ffffff;
+}
+
+button:hover {
+  background-color: #ac2a2a;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.remove-card-button:hover {
+  cursor: pointer;
+  color: #ac2a2a;
+  background-color: #ffffff;
+}
+
+.card-flipped {
+  background-color: rgb(23, 216, 23);
+  border-radius: 4px;
+  border: none;
+  color: white;
+  padding: 73px 44px;
+  width: 100%;
+}
+
+.card-flipped:hover {
+  background-color: rgb(23, 216, 23);
+}
+
+textarea {
+  width: 70%;
+  height: auto;
+  color: #2f2f2f;
+  margin-left: 15%;
+  margin-top: 4%;
+  padding: 2%;
+  padding-bottom: 4%;
+  font-size: 1.3em;
+  resize: none;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+.cards-list button {
+  width: 100%;
+  height: auto;
+}
+
+.cards-list {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#flashcards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#flashcards button:disabled {
+  background-color: darkgray;
+  color: #2f2f2f;
+  cursor: not-allowed;
 }

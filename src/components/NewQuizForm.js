@@ -18,6 +18,7 @@ export default function NewQuizForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (name.length === 0) {
+      alert("Enter a name for the Quiz before creating it!");
       return;
     }
     if (topicId === "") {
@@ -28,6 +29,12 @@ export default function NewQuizForm() {
       alert("Add at least one flashcard to your quiz before proceeding!");
       return;
     }
+    cards.forEach((card) => {
+      if (card.front === "" || card.back === "") {
+        alert("No flashcard can contain an empty side!");
+        return;
+      }
+    });
     const cardIds = [];
 
     let uniqueCardId = 0;
@@ -122,8 +129,8 @@ export default function NewQuizForm() {
           </div>
         ))}
         <div className="actions-container">
-          <button onClick={addCardInputs}>Add a Card</button>
-          <button>Create Quiz</button>
+          <button onClick={addCardInputs}>Add a FlashCard</button>
+          <button type="submit">Create Quiz</button>
         </div>
       </form>
     </section>

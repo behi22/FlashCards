@@ -15,7 +15,10 @@ export default function Quizzes() {
           </Link>
         ))}
       </ul>
-      <Link to={ROUTES.newQuizRoute()} className="button">
+      <Link
+        to={ROUTES.newQuizRoute()}
+        className="button create-new-topic-button"
+      >
         Create New Quiz
       </Link>
     </section>

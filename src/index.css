@@ -43,3 +43,13 @@ ul {
   justify-content: center;
   align-items: center;
 }
+
+.card-flipped {
+  width: 500px;
+  height: 250px;
+  background: rgb(23, 216, 23);
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
