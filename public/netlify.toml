@@ -1,0 +1,10 @@
+[[redirects]]
+  from = "https://behbod-babai-flashcards.netlify.app/topics/*"
+  to = "https://behbod-babai-flashcards.netlify.app/"
+  status = 301
+  force = true
+[[redirects]]
+  from = "https://behbod-babai-flashcards.netlify.app/quizzes/*"
+  to = "https://behbod-babai-flashcards.netlify.app/"
+  status = 301
+  force = true
