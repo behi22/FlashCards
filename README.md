@@ -1,26 +1,49 @@
-# To Run
+#
 
-Run `npm start` in the project root and the app will be available on port 3000.
+Flashcards
+This project is a responsive react application that allows users to create topics, quizzes for those topics and flashcards for quizzes.
 
-# State
+## Table of Contents
 
-The app's state is totally normalized, with slices for topics, quizzes, and cards.
+- [General Info](#general-information)
+- [Technologies Used](#technologies-used)
+- [Usage](#usage)
+- [Project Status](#project-status)
+- [Room for Improvement](#room-for-improvement)
+- [Acknowledgements](#acknowledgements)
+- [Contact](#contact)
 
-# Routes
+## General Information
 
-- `/new-topic` – form to create a new topic
-- `/topics` – index of all topics
-- `/topics/:topicId` – page for an individual topic
-- `/new-quiz` – form to create a new quiz
-- `/quizzes` – index of all quizzes
-- `/quizzes/:quizId` – page for an individual quiz
+This webpage is developed to showcase knowledge of developing responsive webpages using react and managing the state of the application using redux. The website allows users to create topics, quizzes for those topics and flashcards for quizzes.
 
-# To Test
+## Technologies Used
 
-1. Create topics
-2. Create quizzes
-3. Visit the page for an individual quiz and flip the cards over
+- npm - 16.17.1
+- React.js
+- Redux.js
+- HTML - version html5
+- CSS
+- git - version 2.38.1.windows.1
+- github
 
-# Questions
+## Usage
 
-Is this appropriately scoped? Does it have too many features? Too few?
+Allows users to create topics, quizzes for those topics and flashcards for quizzes.
+
+## Project Status
+
+Project is: Complete
+
+## Room for Improvement
+
+- Disallowing empty flashcards.
+
+## Acknowledgements
+
+- Many thanks to Codecademy for including the idea for this project on their front-end development path.
+
+## Contact
+
+Created by Behbod Babai
+LinkedIn: https://www.linkedin.com/in/behbod-babai-6573451b0/

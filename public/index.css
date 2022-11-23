@@ -207,7 +207,7 @@ li:not(:last-child) {
 }
 
 .card {
-  background: #ac2a2a;
+  background: #4c4e49;
   border-radius: 4px;
   border: none;
   color: white;
@@ -284,4 +284,8 @@ textarea:focus {
   background-color: darkgray;
   color: #2f2f2f;
   cursor: not-allowed;
+}
+
+.card:hover {
+  background: #4c4e49;
 }
