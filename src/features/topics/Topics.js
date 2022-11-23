@@ -12,12 +12,12 @@ export default function Topics() {
       <h1>Topics</h1>
       <ul className="topics-list">
         {Object.values(topics).map((topic) => (
-          <li className="topic" key={topic.id}>
-            <Link to={ROUTES.topicRoute(topic.id)} className="topic-link">
+          <li className="topic" key={topic.data.id}>
+            <Link to={ROUTES.topicRoute(topic.data.id)} className="topic-link">
               <div className="topic-container">
-                <img src={topic.icon} alt="" />
+                <img src={topic.data.icon} alt="" />
                 <div className="text-content">
-                  <h2>{topic.name}</h2>
+                  <h2>{topic.data.name}</h2>
                   <p>{topic.quizIds.length} Quizzes</p>
                 </div>
               </div>

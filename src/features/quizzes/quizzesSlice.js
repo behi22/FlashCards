@@ -9,8 +9,8 @@ const quizzes = createSlice({
   reducers: {
     createQuiz: (state, action) => {
       state.allQuizzes = {
-        [action.payload.id]: action.payload,
-        ...state.allQuizzes
+        ...state.allQuizzes,
+        [action.payload.id]: action.payload
       };
     }
   }
