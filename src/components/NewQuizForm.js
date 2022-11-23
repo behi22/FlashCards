@@ -16,7 +16,6 @@ export default function NewQuizForm() {
   const dispatch = useDispatch();
 
   const handleSubmit = (e) => {
-    e.preventDefault();
     if (name.length === 0) {
       alert("Enter a name for the Quiz before creating it!");
       return;
@@ -29,12 +28,16 @@ export default function NewQuizForm() {
       alert("Add at least one flashcard to your quiz before proceeding!");
       return;
     }
+    let emptyFound = false;
     cards.forEach((card) => {
       if (card.front === "" || card.back === "") {
         alert("No flashcard can contain an empty side!");
-        return;
+        emptyFound = true;
       }
     });
+    if (emptyFound) {
+      return;
+    }
     const cardIds = [];
 
     let uniqueCardId = 0;
@@ -81,58 +84,56 @@ export default function NewQuizForm() {
   return (
     <section>
       <h1>Create a new quiz</h1>
-      <form onSubmit={handleSubmit}>
-        <input
-          id="quiz-name"
-          value={name}
-          onChange={(e) => setName(e.currentTarget.value)}
-          placeholder="Quiz Title"
-        />
-        <select
-          id="quiz-topic"
-          onChange={(e) => setTopicId(e.currentTarget.value)}
-          placeholder="Topic"
-        >
-          <option value="">Topic</option>
-          {Object.values(topics).map((topic) => (
-            <option key={topic.data.id} value={topic.data.id}>
-              {topic.data.name}
-            </option>
-          ))}
-        </select>
-        {cards.map((card, index) => (
-          <div key={index} className="card-front-back">
-            <input
-              id={`card-front-${index}`}
-              value={cards[index].front}
-              onChange={(e) =>
-                updateCardState(index, "front", e.currentTarget.value)
-              }
-              placeholder="Front"
-            />
-
-            <input
-              id={`card-back-${index}`}
-              value={cards[index].back}
-              onChange={(e) =>
-                updateCardState(index, "back", e.currentTarget.value)
-              }
-              placeholder="Back"
-            />
-
-            <button
-              onClick={(e) => removeCard(e, index)}
-              className="remove-card-button"
-            >
-              Remove Card
-            </button>
-          </div>
+      <input
+        id="quiz-name"
+        value={name}
+        onChange={(e) => setName(e.currentTarget.value)}
+        placeholder="Quiz Title"
+      />
+      <select
+        id="quiz-topic"
+        onChange={(e) => setTopicId(e.currentTarget.value)}
+        placeholder="Topic"
+      >
+        <option value="">Topic</option>
+        {Object.values(topics).map((topic) => (
+          <option key={topic.data.id} value={topic.data.id}>
+            {topic.data.name}
+          </option>
         ))}
-        <div className="actions-container">
-          <button onClick={addCardInputs}>Add a FlashCard</button>
-          <button type="submit">Create Quiz</button>
+      </select>
+      {cards.map((card, index) => (
+        <div key={index} className="card-front-back">
+          <input
+            id={`card-front-${index}`}
+            value={cards[index].front}
+            onChange={(e) =>
+              updateCardState(index, "front", e.currentTarget.value)
+            }
+            placeholder="Front"
+          />
+
+          <input
+            id={`card-back-${index}`}
+            value={cards[index].back}
+            onChange={(e) =>
+              updateCardState(index, "back", e.currentTarget.value)
+            }
+            placeholder="Back"
+          />
+
+          <button
+            onClick={(e) => removeCard(e, index)}
+            className="remove-card-button"
+          >
+            Remove Card
+          </button>
         </div>
-      </form>
+      ))}
+      <div className="actions-container">
+        <button onClick={addCardInputs}>Add a Card</button>
+        <button onClick={handleSubmit}>Create Quiz</button>
+      </div>
     </section>
   );
 }
