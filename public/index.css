@@ -1,16 +1,16 @@
 * {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   box-sizing: border-box;
 }
 
 html,
 body {
   margin: 0;
-  background-color: #ffffff;
+  background-color: #db7317;
 }
 
 nav {
-  background: #ac2a2a;
+  background: #2d2c30ec;
   display: flex;
   padding: 24px 36px;
 }
@@ -41,26 +41,26 @@ nav a.active {
 h1 {
   font-weight: bold;
   font-size: 20px;
-  color: #ac2a2a;
+  color: #2f2f2f;
   margin: 0;
 }
 
 h2 {
   font-weight: bold;
   font-size: 16px;
-  color: #ac2a2a;
+  color: #2f2f2f;
   margin: 0;
 }
 
 button,
 .button {
   background: #ffffff;
-  border: 1px solid #ac2a2a;
+  border: 1px solid #2f2f2f;
   border-radius: 20px;
   text-align: center;
   font-weight: bold;
   font-size: 14px;
-  color: #ac2a2a;
+  color: #2f2f2f;
   padding: 10px 21px;
   text-decoration: none;
 }
@@ -69,6 +69,17 @@ button,
   margin: 0 auto;
   display: block;
   width: 182px;
+}
+
+.create-new-topic-button:hover {
+  background-color: #2f2f2f;
+  color: white;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #2f2f2f;
+  color: white;
 }
 
 section {
@@ -119,8 +130,8 @@ section > h1 {
 }
 
 .remove-card-button {
-  color: #ac2a2a;
-  background-color: #ffffff;
+  color: #000000;
+  background-color: #f60909;
   text-decoration: underline;
   text-align: right;
   font-weight: bold;
@@ -130,6 +141,12 @@ section > h1 {
   border: none;
   padding: unset;
   margin-top: -8px;
+}
+
+.remove-card-button:hover {
+  cursor: pointer;
+  color: #000000;
+  background-color: #f60909;
 }
 
 option {
@@ -207,7 +224,7 @@ li:not(:last-child) {
 }
 
 .card {
-  background: #4c4e49;
+  background-color: #2f2f2f;
   border-radius: 4px;
   border: none;
   color: white;
@@ -215,25 +232,8 @@ li:not(:last-child) {
   width: 100%;
 }
 
-.create-new-topic-button:hover {
-  background-color: #ac2a2a;
-  color: #ffffff;
-}
-
-button:hover {
-  background-color: #ac2a2a;
-  color: #ffffff;
-  cursor: pointer;
-}
-
-.remove-card-button:hover {
-  cursor: pointer;
-  color: #ac2a2a;
-  background-color: #ffffff;
-}
-
 .card-flipped {
-  background-color: rgb(23, 216, 23);
+  background-color: darkgreen;
   border-radius: 4px;
   border: none;
   color: white;
@@ -242,7 +242,7 @@ button:hover {
 }
 
 .card-flipped:hover {
-  background-color: rgb(23, 216, 23);
+  background-color: darkgreen;
 }
 
 textarea {
@@ -259,6 +259,11 @@ textarea {
 
 textarea:focus {
   outline: none;
+}
+
+.cards-list button {
+  width: 80%;
+  height: auto;
 }
 
 .cards-list button {
@@ -284,8 +289,4 @@ textarea:focus {
   background-color: darkgray;
   color: #2f2f2f;
   cursor: not-allowed;
-}
-
-.card:hover {
-  background: #4c4e49;
 }
